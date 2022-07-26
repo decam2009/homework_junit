@@ -13,7 +13,7 @@ public class ParserTest {
     private final List<Employee> employeeList = Arrays.asList(new Employee(1L, "John", "Smith", "USA", 25), new Employee(2L, "Ivan", "Petrov", "RU", 23));
 
     @Test
-    public void testReturnEmployeeListFromCSV_validResult_objectsEquals() {
+    public void testReturnEmployeeListFromCSVvalidResultobjectsEquals() {
         //when
         final List<Employee> result = Main.parseCSV(new String[]{"id", "firstName", "lastName", "country", "age"}, "data.csv");
         //then
@@ -23,7 +23,7 @@ public class ParserTest {
     }
 
     @Test
-    public void testWriteString_validResult_LinesMatches() {
+    public void testWriteStringvalidResultLinesMatches() {
         //given
         final String expected = "Test passed";
         String result = "";
@@ -44,7 +44,7 @@ public class ParserTest {
     }
 
     @Test
-    public void testParsingListToJson_validResult_LinesMatches() {
+    public void testParsingListToJsonvalidResultLinesMatches() {
         //given
         final String expected = "[{\"id\":1,\"firstName\":\"John\",\"lastName\":\"Smith\",\"country\":\"USA\",\"age\":25},{\"id\":2,\"firstName\":\"Ivan\",\"lastName\":\"Petrov\",\"country\":\"RU\",\"age\":23}]";
         //when
@@ -56,7 +56,7 @@ public class ParserTest {
     }
 
     @Test
-    public void testParsingToXML_validResult_ObjectsEquals() throws ParserConfigurationException, IOException, SAXException {
+    public void testParsingToXMLvalidResultObjectsEquals() throws ParserConfigurationException, IOException, SAXException {
         //when
         List<Employee> result = Main.parseXML("data.xml");
         //then
